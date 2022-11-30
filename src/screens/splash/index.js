@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Styles } from './style';
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
+
+    useEffect(() => {
+        setTimeout(() => { navigation.navigate('Home') }, 2500)
+    }, [])
+
     return (
         <Styles.Container>
             <Styles.Label testID={'title'}>
-                Teste com jest usando o github Actions
+                Free insult
             </Styles.Label>
         </Styles.Container>
     );
